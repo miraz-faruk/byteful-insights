@@ -1,0 +1,20 @@
+.mulish-large {
+    font-family: "Mulish", sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.mulish-medium {
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.mulish-small {
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
