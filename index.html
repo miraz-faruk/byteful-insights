@@ -129,60 +129,21 @@
         <section class="container mx-auto min-h-screen">
             <div class="text-center">
                 <h1 class="mulish-large text-[40px] pb-6">Let's Discuss</h1>
-                <p class="text-lg lg:px-64 text-[#12132D99] pb-12">Yes, you can run unit tests and view the results
+                <p class="text-lg px-1 lg:px-64 text-[#12132D99] pb-12">Yes, you can run unit tests and view the results
                     directly within the app. The integrated testing
                     features allow for a streamlined .</p>
             </div>
             <div class="lg:flex gap-10">
-                <div id="topic-container" class="w-full lg:w-2/3 flex flex-col gap-6">
-                    <div class="w-full bg-[#F3F3F5] shadow-xl flex gap-6 p-5 lg:p-10 rounded-3xl">
-                        <div>
-                            <figure><img class="rounded-2xl w-[72px] h-[72px] relative"
-                                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                                    alt="Shoes" />
-                            </figure>
-                        </div>
-                        <div class="w-full">
-                            <div class="flex gap-5 text-[#12132DCC] font-mulish-small pb-3">
-                                <p># </p>
-                                <p>Author : </p>
-                            </div>
-                            <h2 class="card-title font-mulish-medium text-xl pb-4">Shoes!</h2>
-                            <p class="text-[#12132D99]">If a dog chews shoes whose shoes does he choose?</p>
-                            <hr class="border-[#12132D40] border-dashed pb-5">
-                            <div class="text-[#12132D99] flex justify-between">
-                                <div class="flex gap-6">
-                                    <div class="flex items-center gap-3">
-                                        <i class="fa-regular fa-message"></i>
-                                        <!-- <p>${topic.comment_count}</p> -->
-                                    </div>
-                                    <div class="flex items-center gap-3">
-                                        <i class="fa-regular fa-eye"></i>
-                                        <!-- <p>${topic.view_count}</p> -->
-                                    </div>
-                                    <div class="flex items-center gap-3">
-                                        <i class="fa-regular fa-clock"></i>
-                                        <!-- <p>${topic.posted_time}</p> -->
-                                    </div>
-                                </div>
-                                <div class="bg-[#10B981] rounded-full">
-                                    <i class="fa-solid fa-envelope-open p-2 text-white"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div id="topic-container" class="w-full lg:w-2/3 flex flex-col gap-6 mb-12 lg:mb-[100px]">
                 </div>
                 <div class="w-full lg:w-1/3">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ducimus!</p>
-
                 </div>
             </div>
-
-
         </section>
 
         <!-- Join our team section -->
-        <section class="container mx-auto bg-[#12132D] rounded-[32px] text-white">
+        <section class="container mx-auto bg-[#12132D] rounded-[32px] text-white mb-12 lg:mb-[100px]">
             <div class="lg:flex lg:text-left text-center p-4 lg:p-0">
                 <div class="flex flex-col justify-center lg:ps-24">
                     <h1 class="mulish-large text-[40px] pb-4">Join Our Team</h1>
@@ -197,6 +158,19 @@
                     <img class="border-x border-t border-dashed" src="images/joinforum.png" alt="">
                 </div>
             </div>
+        </section>
+
+        <!-- Latest post section -->
+        <section class="container mx-auto min-h-screen mb-12 lg:mb-[100px]">
+            <div class="text-center">
+                <h1 class="mulish-large text-[40px] pb-6">Latest Posts</h1>
+                <p class="text-lg lg:px-64 text-[#12132D99] pb-12">Yes, you can run unit tests and view the results
+                    directly within the app. The integrated testing
+                    features allow for a streamlined .</p>
+            </div>
+            <div id="post-container" class="lg:flex gap-6 mx-2">
+            </div>
+
         </section>
     </main>
     <footer class="bg-[#12132D0D] to [#12132D] text-center p-5 lg:p-0 lg:py-[100px] lg:px-[135px]">
@@ -216,6 +190,7 @@
         <p class="pt-6 lg:pt-12">2017, All Rights Reserved.</p>
     </footer>
     <script src="js/discuss.js"></script>
+    <script src="js/posts.js"></script>
 </body>
 
 </html>
