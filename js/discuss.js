@@ -17,8 +17,9 @@ const displayTopics = topics => {
         topicCard.classList = `w-full bg-[#F3F3F5] flex gap-6 p-5 lg:p-10 rounded-3xl`;
         // 3. set innerHTML
         topicCard.innerHTML = `
-        <div>
+        <div class="relative ">
             <figure><img class="rounded-2xl w-auto lg:w-[72px]" src="${topic.image}" alt="Shoes" /></figure>
+            <div class="absolute -top-1 -right-1 w-4 h-4 ${topic.isActive ? 'bg-green-500' : 'bg-red-500'} rounded-full border-2 border-white"></div>
         </div>
         <div class="w-full">
             <div class="flex gap-5 text-[#12132DCC] font-mulish-small pb-3">

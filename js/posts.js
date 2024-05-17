@@ -1,4 +1,4 @@
-const loadPosts = async () =>{
+const loadPosts = async () => {
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
     const data = await res.json();
     const posts = data;
@@ -7,11 +7,11 @@ const loadPosts = async () =>{
 
 }
 
-const displayPosts = posts =>{
+const displayPosts = posts => {
     // console.log(posts);
     const postContainer = document.getElementById('post-container');
 
-    posts.forEach(post =>{
+    posts.forEach(post => {
         console.log(post);
 
         const postCard = document.createElement('div');
