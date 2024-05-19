@@ -95,11 +95,13 @@
                         and
                         wp<br>forum
                         coffee mug!</p>
+
+                    <!-- Search field -->
                     <div class="flex relative px-8 lg:px-0">
-                        <input class="mulish-small rounded-[50px] py-4 ps-5 w-full text-black" type="text"
+                        <input id="search-field" class="mulish-small rounded-[50px] py-4 ps-5 w-full text-black" type="text"
                             placeholder="Search here anything">
-                        <a
-                            class="btn bg-[#797DFC] rounded-full text-white absolute top-0 right-8 lg:right-0 mt-1 mr-1 px-7">Search</a>
+                        <button onclick="handleSearch()"
+                            class="btn bg-[#797DFC] rounded-full text-white absolute top-0 right-8 lg:right-0 mt-1 mr-1 px-7">Search</button>
                     </div>
                 </div>
                 <div
@@ -132,6 +134,10 @@
                 <p class="text-lg px-1 lg:px-64 text-[#12132D99] pb-12">Yes, you can run unit tests and view the results
                     directly within the app. The integrated testing
                     features allow for a streamlined .</p>
+            </div>
+            <!-- Loading spinner -->
+            <div id="loading-spinner" class="text-center my-20 hidden">
+                <span class="loading loading-spinner loading-lg"></span>
             </div>
             <div class="lg:flex gap-10">
                 <div id="topic-container" class="w-full lg:w-2/3 flex flex-col gap-6 mb-12 lg:mb-[100px]">
