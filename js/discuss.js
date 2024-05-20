@@ -53,7 +53,7 @@ const displayTopics = topics => {
                     </div>
                 </div>
                 <div class="bg-[#10B981] rounded-full">
-                    <i class="fa-solid fa-envelope-open p-2 text-white"></i>
+                <button id="mark-as-read" onclick="readingHistory('${topic.id}', '${topic.title}', '${topic.view_count}')"><i class="fa-solid fa-envelope-open p-2 text-white"></i></button>
                 </div>
             </div>
         </div>
@@ -66,6 +66,54 @@ const displayTopics = topics => {
         toggleLoadingSpinner(false);
     }, 2000);
 }
+
+// Function to update the reading count
+let readingCount = 0;
+const updateReadingCount = () => {
+    const readingCountElement = document.getElementById('reading-count');
+    readingCount++;
+    readingCountElement.textContent = readingCount;
+};
+
+// Reading history
+const readingHistory = (id, title, view_count) => {
+
+    updateReadingCount();
+    // Display the updated reading count
+    const readingCountElement = document.getElementById('reading-count');
+    readingCountElement.textContent = readingCount;
+
+    // Create a new div to contain the title and view count
+    const newPostElement = document.createElement('div');
+    newPostElement.classList.add('flex', 'justify-between', 'mb-4', 'bg-white', 'rounded-2xl', 'p-4');
+
+    // Create a new h3 element for the title
+    const newTitleElement = document.createElement('h3');
+    newTitleElement.classList.add('font-semibold');
+    newTitleElement.textContent = title;
+
+    // Create a new div to contain the view count icon and text
+    const viewCountContainer = document.createElement('div');
+    viewCountContainer.classList.add('flex', 'gap-2', 'items-center', 'text-[#12132D99]');
+
+    // Create a new icon element and p element for the view count
+    const viewCountIcon = document.createElement('i');
+    viewCountIcon.classList.add('fa-regular', 'fa-eye');
+    const viewCountText = document.createElement('p');
+    viewCountText.textContent = view_count;
+
+    // Append the title and view count elements to the new post element
+    newPostElement.appendChild(newTitleElement);
+    viewCountContainer.appendChild(viewCountIcon);
+    viewCountContainer.appendChild(viewCountText);
+    newPostElement.appendChild(viewCountContainer);
+
+    // Get the topic-details section
+    const topicDetails = document.getElementById('topic-details');
+
+    // Append the new post element to the topic-details section
+    topicDetails.appendChild(newPostElement);
+};
 
 // Handle search
 const handleSearch = () => {

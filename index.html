@@ -27,6 +27,7 @@
 <body>
     <!-- Header section -->
     <header class="container mx-auto min-h-screen">
+
         <!-- Navigation Bar -->
         <div class="navbar bg-base-100">
             <div class="navbar-start">
@@ -58,10 +59,12 @@
                             </a></li>
                     </ul>
                 </div>
+
                 <!-- Site name -->
                 <a class="btn btn-ghost mulish-large text-teal-800">Byteful <span
                         class="text-purple-500">Insights</span></a>
             </div>
+
             <!-- Menu -->
             <div class="navbar-end hidden lg:flex">
                 <ul class="menu menu-horizontal gap-3">
@@ -98,8 +101,8 @@
 
                     <!-- Search field -->
                     <div class="flex relative px-8 lg:px-0">
-                        <input id="search-field" class="mulish-small rounded-[50px] py-4 ps-5 w-full text-black" type="text"
-                            placeholder="Search here anything">
+                        <input id="search-field" class="mulish-small rounded-[50px] py-4 ps-5 w-full text-black"
+                            type="text" placeholder="Search here anything">
                         <button onclick="handleSearch()"
                             class="btn bg-[#797DFC] rounded-full text-white absolute top-0 right-8 lg:right-0 mt-1 mr-1 px-7">Search</button>
                     </div>
@@ -135,15 +138,27 @@
                     directly within the app. The integrated testing
                     features allow for a streamlined .</p>
             </div>
+
             <!-- Loading spinner -->
-            <div id="loading-spinner" class="text-center my-20 hidden">
+            <div id="loading-spinner" class="text-center my-10 hidden">
                 <span class="loading loading-spinner loading-lg"></span>
             </div>
             <div class="lg:flex gap-10">
                 <div id="topic-container" class="w-full lg:w-2/3 flex flex-col gap-6 mb-12 lg:mb-[100px]">
                 </div>
-                <div class="w-full lg:w-1/3">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ducimus!</p>
+
+                <!-- Reading History dialogue -->
+                <div class="w-full lg:w-1/3 h-min p-6 bg-[#12132D0D] rounded-3xl">
+                    <div class="flex justify-between pb-5">
+                        <h3 class="mulish-medium text-xl">Title</h3>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check-double text-green-400"></i>
+                            <p class="text-[#12132D99]">Mark as read ( <span id="reading-count"></span> )</p>
+                        </div>
+                    </div>
+                    <div id="topic-details">
+                        
+                    </div>
                 </div>
             </div>
         </section>
